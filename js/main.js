@@ -57,7 +57,6 @@ function getNextDay(data) {
 
     let nextDate = new Date(forecastData[i + 1].date);
 
-    console.log(nextDate);
 
     nextDays[i].innerHTML = nextDate.toLocaleDateString("en-US", {
       weekday: "long",

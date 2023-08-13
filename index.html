@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Wheather App</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg position-sticky top-0 end-0 start-0">
+      <div class="container py-4">
+        <a
+          class="navbar-brand me-3 gap-3 d-flex justify-content-center align-items-center text-white"
+          href="#"
+          ><img class="img-logo" src="./images/logo@2x.png" alt="logo" />
+          <div class="logoInfo">
+            <h1 class="fs-5 fw-bold m-0">Weather</h1>
+            <p class="m-0">tagline goes here</p>
+          </div></a
+        >
+
+        <button
+          class="navbar-toggler d-lg-none bg-info"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span><i class="fa-solid fa-bars text-white"></i></span>
+        </button>
+        <div
+          class="collapse navbar-collapse overflow-hidden my-md-4 my-lg-0"
+          id="collapsibleNavId"
+        >
+          <ul class="navbar-nav ms-auto text-center">
+            <li class="nav-item me-2 py-3">
+              <a
+                class="nav-link px-3 rounded-pill text-white active"
+                href="#"
+                aria-current="page"
+                >Home <span class="visually-hidden">(current)</span></a
+              >
+            </li>
+            <li class="nav-item me-2 py-3">
+              <a class="nav-link rounded-pill px-3 text-white" href="#">News</a>
+            </li>
+            <li class="nav-item me-2 py-3">
+              <a class="nav-link rounded-pill px-3 text-white" href="#">Live</a>
+            </li>
+            <li class="nav-item me-2 py-3">
+              <a class="nav-link rounded-pill px-3 text-white" href="#"
+                >cameras</a
+              >
+            </li>
+            <li class="nav-item me-2 py-3">
+              <a class="nav-link rounded-pill px-3 text-white" href="#"
+                >Photos</a
+              >
+            </li>
+            <li class="nav-item me-2 py-3 border-0">
+              <a class="nav-link rounded-pill px-3 text-white" href="#"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header>
+      <div class="container">
+        <div class="search position-relative">
+          <input
+          id="searchInput"
+            class="rounded-pill border-0 form-control shadow-none"
+            type="text"
+            placeholder="find your location"
+          />
+          <button
+            class="btn btn-primary rounded-pill position-absolute px-5 py-1 translate-middle-y z-3"
+          >
+            find
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="wheather-cards mb-5">
+      <div class="container">
+        <div class="row cards g-0">
+          <div class="col-lg-4 card">
+            <div class="p-1">
+              <div
+                class="card-header date d-flex justify-content-between align-items-center"
+              >
+                <p id="day1" class="mb-0">monday</p>
+                <p id="date1" class="mb-0">August</p>
+              </div>
+              <div class="card-body">
+                <div class="blockquote mb-0 d-flex flex-column justify-content-between gap-4">
+                  <div id="location" class="text-white m-0">san francisco</div>
+                  <div
+                    class="temp d-flex align-items-center justify-content-between  gap-sm-4 gap-md-5 gap-lg-2"
+                  >
+                    <span class="fw-bolder ">
+                      <span  id="temp-today">18.3</span>
+                      <span><sup>o</sup>C</span>
+                    </span>
+                    <div>
+                      <img id="icon-today"
+                        class="w-100"
+                        src="https://cdn.weatherapi.com/weather/64x64/day/116.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <p id="wheather-statue-today" class="text-warning">partly cloudy</p>
+                  <div class="temp-info d-flex gap-4">
+                    <div class="info d-flex align-items-baseline gap-2">
+                      <div class="img-info">
+                        <img
+                          class="w-100"
+                          src="./images/icon-umberella.png"
+                          alt=""
+                        />
+                      </div>
+                      <p class="text-light " id="humidity">20%</p>
+                    </div>
+                    <div class="info d-flex align-items-baseline gap-2">
+                      <div class="img-info">
+                        <img
+                          class="w-100"
+                          src="./images/icon-wind.png"
+                          alt=""
+                        />
+                      </div>
+                      <p class="text-light" id="wind-speed">18km/h</p>
+                    </div>
+                    <div class="info d-flex align-items-baseline gap-2">
+                      <div class="img-info">
+                        <img
+                          class="w-100"
+                          src="./images/icon-compass.png"
+                          alt=""
+                        />
+                      </div>
+                      <p class="text-light " id="wind-dir">east</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 card card-md">
+            <div class="p-1">
+              <div
+                class="card-header date d-flex justify-content-center align-items-center"
+              >
+                <p  class="mb-0 next-days">monday</p>
+              </div>
+              <div class="card-body">
+                <div
+                  class="cont mb-0 d-flex flex-column gap-5 align-items-center"
+                >
+                  <div class="img-md">
+                    <img
+                      src="https://cdn.weatherapi.com/weather/64x64/day/143.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="text-center d-flex flex-column gap-3">
+                    <p class="temp-up fs-1">18.3<sup>o</sup>C</p>
+                    <p class="temp-down fs-5">18.3<sup>o</sup>C</p>
+                    <p class="statue text-warning  ">Mist</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 card">
+            <div class="p-1">
+              <div
+                class="card-header date d-flex justify-content-center align-items-center"
+              >
+                <p class="mb-0 next-days" >monaday</p>
+              </div>
+              <div class="card-body">
+                <div
+                  class="cont mb-0 d-flex flex-column gap-5 align-items-center"
+                >
+                  <div class="img-md">
+                    <img
+                      src="https://cdn.weatherapi.com/weather/64x64/day/143.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="text-center d-flex flex-column gap-3">
+                    <p class="temp-up fs-1">18.3<sup>o</sup>C</p>
+                    <p class="temp-down fs-5">18.3<sup>o</sup>C</p>
+                    <p class="statue text-warning">Mist</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="z-3 py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <div class="search position-relative">
+              <input
+                class="rounded-pill border-0 form-control shadow-none"
+                type="text"
+                placeholder="enter your email to subscribe"
+              />
+              <button
+                class="btn btn-primary rounded-pill position-absolute px-5 py-1 translate-middle-y z-3"
+              >
+                subscribe
+              </button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex justify-content-evenly mt-sm-4 mt-md-0">
+              <div
+                class="icon d-flex text-primary justify-content-center align-items-center rounded-circle"
+              >
+                <i class="fa-brands fa-facebook"></i>
+              </div>
+              <div
+                class="icon d-flex text-primary justify-content-center align-items-center rounded-circle"
+              >
+                <i class="fa-brands fa-twitter"></i>
+              </div>
+              <div
+                class="icon d-flex text-primary justify-content-center align-items-center rounded-circle"
+              >
+                <i class="fa-brands fa-google-plus"></i>
+              </div>
+              <div
+                class="icon d-flex text-primary justify-content-center align-items-center rounded-circle"
+              >
+                <i class="fa-brands fa-pinterest"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-white mt-4">
+            Copyright 2014 Company name. Designed by Themezy. All rights
+            reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
